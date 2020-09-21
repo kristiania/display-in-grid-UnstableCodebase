@@ -1,31 +1,46 @@
 .grid-container{
-
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [col] 100px [col] 100px [col] 100px [col] 100px  ;
+    grid-template-rows: [row] auto [row] auto [row] ;
 }
 
-grid-item {
+.grid-item{
+    border-radius: 5px;
+    padding: 20px;
 }
 
 #grid-one{
+    grid-column: col / span 2;
+    grid-row: row ;
     background-color: red;
     color: red;
 }
 
 #grid-two{
+    grid-column: col 3 / span 2 ;
+    grid-row: row ;
     background-color: blue;
     color: blue;
 }
 
 #grid-three{
+    grid-column: col ;
+    grid-row: row 2 ;
     background-color: green;
     color: green;
 }
 
 #grid-four{
+    grid-column: col 2 / span 3 ;
+    grid-row: row 2 ;
     background-color: purple;
     color: purple;
 }
 
 #grid-five{
+    grid-column: col / span 4;
+    grid-row: row 3;
     background-color:yellow;
     color: yellow;
 }
